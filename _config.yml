@@ -2,3 +2,7 @@ name: Hobbe5
 description: Thoughts of Hobbe5
 paginate: 10
 excerpt_separator: <!--more-->
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
