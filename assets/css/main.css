@@ -9,7 +9,7 @@
 
 /* Reset */
 
-	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, a, abbr, acronym, address, big, cite, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
 		margin: 0;
 		padding: 0;
 		border: 0;
@@ -48,17 +48,6 @@
 		-webkit-text-size-adjust: none;
 	}
 
-	pre {
-		width: 500px;                          /* specify width  */
-		white-space: pre-wrap;                 /* CSS3 browsers  */
-		white-space: -moz-pre-wrap !important; /* 1999+ Mozilla  */
-		white-space: -pre-wrap;                /* Opera 4 thru 6 */
-		white-space: -o-pre-wrap;              /* Opera 7 and up */
-		word-wrap: break-word;                 /* IE 5.5+ and up */
-		/* overflow-x: auto; */                /* Firefox 2 only */
-		/* width: 99%; */		       /* only if needed */
-	}
-	
 /* Box Model */
 
 	*, *:before, *:after {
