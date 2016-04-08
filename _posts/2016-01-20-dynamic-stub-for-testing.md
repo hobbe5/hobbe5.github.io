@@ -6,8 +6,9 @@ excerpt: <p>As a developer, I'm a believer in test-driven devleopment, TDD. When
 ---
 
 <p>As a developer, I'm a believer in test-driven devleopment, TDD. When setting up a unit test project one of the redundant tasks I find myself performing is setting up initial test data, so I always import the same two classes for my test projects.</p>
+<!--more-->
 <p>The first is a static class called Rand and it's single responsibility is to provide the caller with random data:</p>
-<pre class="prettyprint">
+{% highlight csharp %}
 public static class Rand
 {
     public static int GetInt()
@@ -27,7 +28,7 @@ public static class Rand
         return new Guid().ToString().Substring(0, length);
     }
 }
-</pre>
+{% endhighlight %}
 <p>The second is an abstract class which makes use of generics for my test classes to inherit:</p>
 <pre class="prettyprint">
 internal abstract class BaseFake&lt;T&gt;
