@@ -2,6 +2,7 @@
 title: Dynamic Stubs for Testing
 featured: images/wbuffet.jpg
 layout: post
+excerpt: <p>As a developer, I'm a believer in test-driven devleopment, TDD. When setting up a unit test project one of the redundant tasks I find myself performing is setting up initial test data, so I always import the same two classes for my test projects.</p>
 ---
 
 <p>As a developer, I'm a believer in test-driven devleopment, TDD. When setting up a unit test project one of the redundant tasks I find myself performing is setting up initial test data, so I always import the same two classes for my test projects.</p>
