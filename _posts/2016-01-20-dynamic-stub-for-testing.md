@@ -2,13 +2,13 @@
 title: Dynamic Stubs for Testing
 featured: images/wbuffet.jpg
 layout: post
-excerpt: <p>As a developer, I'm a believer in test-driven devleopment, TDD. When setting up a unit test project one of the redundant tasks I find myself performing is setting up initial test data, so I always import the same two classes for my test projects.</p>
 ---
 
-<p>As a developer, I'm a believer in test-driven devleopment, TDD. When setting up a unit test project one of the redundant tasks I find myself performing is setting up initial test data, so I always import the same two classes for my test projects.</p>
+<p>I'm a believer in test-driven devleopment, TDD, for any of my applications. When setting up a unit test project one of the redundant tasks I find myself performing is setting up initial test data, so I always import the same two classes for my test projects in order to quickly grab sample test data.</p>
 <!--more-->
+<br />
 <p>The first is a static class called Rand and it's single responsibility is to provide the caller with random data:</p>
-```cs
+<pre class="prettyprint">
 public static class Rand
 {
     public static int GetInt()
@@ -28,7 +28,7 @@ public static class Rand
         return new Guid().ToString().Substring(0, length);
     }
 }
-```
+</pre>
 <p>The second is an abstract class which makes use of generics for my test classes to inherit:</p>
 <pre class="prettyprint">
 internal abstract class BaseFake&lt;T&gt;
@@ -61,4 +61,4 @@ internal class AddressFake : BaseFake&lt;Address&gt;
     }
 }
 </pre>
-<p>All my fake data is contained to one area and I can manipulate my fakes whichever way I want depending on the behavior I want to test. Keep testing.</p>
+<p>All my fake data is contained to one area and I can manipulate my fakes whichever way I want depending on the behavior I want to test. This simple setup saves me valuable time and less worrying of where to get my data.</p>
