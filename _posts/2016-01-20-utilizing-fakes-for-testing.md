@@ -1,5 +1,6 @@
 ---
 title: Utilizing Fakes for Testing
+category: article
 featured: images/wbuffet.jpg
 layout: post
 ---
