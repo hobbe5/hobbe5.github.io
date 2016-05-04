@@ -9,37 +9,37 @@ layout: post
 <!--more-->
 <p>The city of Philadelphia provides an api supplying a list of houses available in a sheriff sale each month. We wanted to provide a way to display this data easily on a mobile phone. Here is a quick peek of the angular repeater:</p>
 <pre class="prettyprint"><code>
-	<div ng-repeat="sale in pagedItems[currentPage]">
-        <div class="box">
-            <div class="boxInner" id="{{sale.PropertyID}}">
-                <a href="#/detail?addr={{sale.name}}" ng-click="scrollTo(sale.PropertyID)">
-                    <img ng-src="https://maps.googleapis.com/maps/api/streetview?size=400x400&location={{sale.name}}&fov=60&pitch=0&key=#########"/>
-                </a>
-                <div class="titleBox">
-                    {{sale.BooknWrit}}<br/>
+	&lt;div ng-repeat=&quot;sale in pagedItems[currentPage]&quot;&gt;
+        &lt;div class=&quot;box&quot;&gt;
+            &lt;div class=&quot;boxInner&quot; id=&quot;{{sale.PropertyID}}&quot;&gt;
+                &lt;a href=&quot;#/detail?addr={{sale.name}}&quot; ng-click=&quot;scrollToundefinedsale.PropertyID)&quot;&gt;
+                    &lt;img ng-src=&quot;https://maps.googleapis.com/maps/api/streetview?size=400x400&amp;location={{sale.name}}&amp;fov=60&amp;pitch=0&amp;key=#########&quot;/&gt;
+                &lt;/a&gt;
+                &lt;div class=&quot;titleBox&quot;&gt;
+                    {{sale.BooknWrit}}&lt;br/&gt;
                     {{sale.name}}
-                </div>
-            </div>
-        </div>
-    </div>
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
 </code></pre>
-<p><img src="images/sheriffsale1.jpg" align="right" valign="top" vspace="5" hspace="5"/>Each picture on the main page represents a residence for sale and on click shows more detail as seen in the picture above. Pagination is useful instead of infinite scrolling in this case so in the view we add this snippet of code:</p>
+<p><img src="assets/images/sheriffsale1.jpg" align="right" valign="top" vspace="5" hspace="5"/>Each picture on the main page represents a residence for sale and on click shows more detail as seen in the picture above. Pagination is useful instead of infinite scrolling in this case so in the view we add this snippet of code:</p>
 <pre class="prettyprint"><code>
-	<div class="pagination pull-right">
-        <ul>
-            <li ng-class="{disabled: currentPage == 0}">
-                <a href ng-click="prevPage()">« Prev</a>
-            </li>
-            <li ng-repeat="n in range(pagedItems.length)"
-                ng-class="{active: n == currentPage}"
-                ng-click="setPage()">
-                <a href ng-bind="n + 1">1</a>
-            </li>
-            <li ng-class="{disabled: currentPage == pagedItems.length - 1}">
-                <a href ng-click="nextPage()">Next »</a>
-            </li>
-        </ul>
-    </div>
+	&lt;div class=&quot;pagination pull-right&quot;&gt;
+        &lt;ul&gt;
+            &lt;li ng-class=&quot;{disabled: currentPage == 0}&quot;&gt;
+                &lt;a href ng-click=&quot;prevPageundefined)&quot;&gt;« Prev&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li ng-repeat=&quot;n in rangeundefinedpagedItems.length)&quot;
+                ng-class=&quot;{active: n == currentPage}&quot;
+                ng-click=&quot;setPageundefined)&quot;&gt;
+                &lt;a href ng-bind=&quot;n + 1&quot;&gt;1&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li ng-class=&quot;{disabled: currentPage == pagedItems.length - 1}&quot;&gt;
+                &lt;a href ng-click=&quot;nextPageundefined)&quot;&gt;Next »&lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
 </code></pre>
 <p>One thing I learned about angular is about keeping state, in this case we utilized a factory as you can see here:</p>
 <pre class="prettyprint">
