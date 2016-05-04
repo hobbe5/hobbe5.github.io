@@ -25,8 +25,8 @@ layout: post
     &lt;/div&gt;
 </code></pre>
 </div>
-<div>
-<p><img src="/assets/images/sheriffsale1.jpg" align="right" valign="top" vspace="5" hspace="5"/>Each picture on the main page represents a residence for sale and on click shows more detail as seen in the picture above. Pagination is useful instead of infinite scrolling in this case so in the view we add this snippet of code:</p>
+<div style="overflow:auto;">
+<p><img src="/assets/images/sheriffsale1.jpg" align="right" valign="top" width="200" height="200" />Each picture on the main page represents a residence for sale and on click shows more detail as seen in the picture above. Pagination is useful instead of infinite scrolling in this case so in the view we add this snippet of code:</p>
 </div>
 <pre class="prettyprint"><code>
 	&lt;div class=&quot;pagination pull-right&quot;&gt;
