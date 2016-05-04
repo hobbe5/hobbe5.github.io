@@ -7,6 +7,7 @@ layout: post
 
 <p>With the use of angularjs and consuming public data APIs using javascript, I built a hybird web/mobile applcation for use by buyers participating in sheriff sales.</p>
 <!--more-->
+<div>
 <p>The city of Philadelphia provides an api supplying a list of houses available in a sheriff sale each month. We wanted to provide a way to display this data easily on a mobile phone. Here is a quick peek of the angular repeater:</p>
 <pre class="prettyprint"><code>
 	&lt;div ng-repeat=&quot;sale in pagedItems[currentPage]&quot;&gt;
@@ -23,7 +24,10 @@ layout: post
         &lt;/div&gt;
     &lt;/div&gt;
 </code></pre>
+</div>
+<div>
 <p><img src="/assets/images/sheriffsale1.jpg" align="right" valign="top" vspace="5" hspace="5"/>Each picture on the main page represents a residence for sale and on click shows more detail as seen in the picture above. Pagination is useful instead of infinite scrolling in this case so in the view we add this snippet of code:</p>
+</div>
 <pre class="prettyprint"><code>
 	&lt;div class=&quot;pagination pull-right&quot;&gt;
         &lt;ul&gt;
